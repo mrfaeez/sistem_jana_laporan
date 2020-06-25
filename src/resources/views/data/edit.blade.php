@@ -27,9 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/view">View</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/update">Update</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,23 +47,23 @@
 				{{ method_field("PATCH") }}
                 <div class="form-group">       
                     <label for="title">Patient Code</label>
-                    <input type="text" class="form-control" name="patientcode" value="{{ $data[0]->patient_code }}"/>
+                    <input type="text" class="form-control" name="patientcode" value="{{ $data[0]->patient_code }}" required/>
                 </div>
                 <div class="form-group">
                     <label for="body">Patient Name</label>
-                    <input type="text" class="form-control" name="patientname" value="{{ $data[0]->patient_name }}"></input>
+                    <input type="text" class="form-control" name="patientname" value="{{ $data[0]->patient_name }}" required></input>
                 </div>
                 <div class="form-group">
                     <label for="body">Drug Name</label>
-                    <input type="text" class="form-control" name="drugname" value="{{ $data[0]->drug_name }}"></input>
+                    <input type="text" class="form-control" name="drugname" value="{{ $data[0]->drug_name }}" required></input>
                 </div>
                 <div class="form-group">
                     <label for="body">Ward Name</label>
-                    <input type="text" class="form-control" name="wardname" value="{{ $data[0]->ward_name }}"></input>
+                    <input type="text" class="form-control" name="wardname" value="{{ $data[0]->ward_name }}" required></input>
                 </div>
                 <div class="form-group">
                     <label for="body">Time</label>
-                    <input type="datetime-local" class="form-control" name="time" value="{{ Carbon\Carbon::parse($data[0]->time)->format('Y-m-d\Th:i:s') }}"/>
+                    <input type="datetime-local" class="form-control" name="time" value="{{ Carbon\Carbon::parse($data[0]->time)->format('Y-m-d\Th:i:s') }}" required/>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

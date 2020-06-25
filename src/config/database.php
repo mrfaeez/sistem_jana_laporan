@@ -63,6 +63,17 @@ return [
             ]) : [],
         ],
 
+        'mysql2' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST_SECOND', '127.0.0.1'),
+            'database'  => env('DB_DATABASE_SECOND', 'forge'),
+            'username'  => env('DB_USERNAME_SECOND', 'forge'),
+            'password'  => env('DB_PASSWORD_SECOND', ''),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),

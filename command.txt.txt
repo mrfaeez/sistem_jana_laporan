@@ -2,3 +2,9 @@ docker-compose build && docker-compose up -d
 docker-compose up -d
 docker-machine ip default
 docker-compose exec php php /var/www/html/artisan migrate
+
+
+docker container ls
+docker exec -it <container_name> /bin/bash
+mysql -u root -p < 01-databases.sql
+docker-compose exec php php artisan migrate

@@ -27,9 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/view">View</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/update">Update</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,23 +46,23 @@
                 <div class="form-group">
                 @csrf            
                     <label for="title">Patient Code</label>
-                    <input type="text" class="form-control" name="patientcode" placeholder="Patient Code"/>
+                    <input type="text" class="form-control" name="patientcode" placeholder="Patient Code" required/>
                 </div>
                 <div class="form-group">
                     <label for="body">Patient Name</label>
-                    <textarea class="form-control" name="patientname" placeholder="Patient Name"></textarea>
+                    <textarea class="form-control" name="patientname" placeholder="Patient Name" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="body">Drug Name</label>
-                    <textarea class="form-control" name="drugname" placeholder="Drug Name"></textarea>
+                    <textarea class="form-control" name="drugname" placeholder="Drug Name" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="body">Ward Name</label>
-                    <textarea class="form-control" name="wardname" placeholder="Ward Name"></textarea>
+                    <textarea class="form-control" name="wardname" placeholder="Ward Name" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="body">Time</label>
-                    <input type="datetime-local" class="form-control" name="time" placeholder="Time"/>
+                    <input type="datetime-local" class="form-control" name="time" placeholder="Time" required/>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
